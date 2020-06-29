@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Pics App</string>
+    <string name="email_hint">Enter your Email</string>
+    <string name="sign_up">Register</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="sign_in">Login</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="age_hint">Enter your age</string>
+    <string name="email_error">Invalid Email Id</string>
+    <string name="password_error">Password must be between 6 and 12 characters</string>
+    <string name="password_match_error">Passwords do not match</string>
+    <string name="age_error">Age must be between 18 and 99 years</string>
+</resources>

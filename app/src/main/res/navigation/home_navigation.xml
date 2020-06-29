@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home_destination"
+    android:id="@+id/home_navigation.xml">
+    <fragment
+        android:id="@+id/home_destination"
+        android:name="com.app.mypicsapp.ui.main.home.ui.home.HomeFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_home_to_details"
+            app:destination="@id/details_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/details_destination"
+        android:name="com.app.mypicsapp.ui.main.home.ui.details.DetailsFragment"
+        android:label="details_fragment"
+        tools:layout="@layout/details_fragment">
+        <action
+            android:id="@+id/action_details_to_home"
+            app:destination="@+id/home_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/home_destination" />
+        <argument
+            android:name="photo"
+            android:defaultValue="@null"
+            app:argType="com.app.mypicsapp.data.model.ListOfPhotos"
+            app:nullable="true" />
+    </fragment>
+</navigation>
